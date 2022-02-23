@@ -1,12 +1,9 @@
 public class Lab1 {
 
-    //Вывод
     public static void main(String[] args) {
+
         Point3d point = new Point3d();
-        //Ввод координат ??????
-        /**point.setX(Double.valueOf(args[0]));
-        point.setY(Double.valueOf(args[0]));
-        point.setZ(Double.valueOf(args[0]));**/
+
         //Создание трех объектов
         Point3d myPoint = new Point3d(Double.valueOf(args[0]),Double.valueOf(args[1]),Double.valueOf(args[2]));
         Point3d mySecondPoint = new Point3d(Double.valueOf(args[3]),Double.valueOf(args[4]),Double.valueOf(args[5]));
@@ -16,12 +13,13 @@ public class Lab1 {
         System.out.println("Coord of second point (" + mySecondPoint.getX()+"; " + mySecondPoint.getY()+"; " + mySecondPoint.getZ()+")");
         System.out.println("Coord of third point (" + myThirdPoint.getX()+"; " + myThirdPoint.getY()+"; " + myThirdPoint.getZ()+")");
 
+        //Проверка одинаковых точек
         if (point.Compare(myPoint, mySecondPoint)|| point.Compare(mySecondPoint, myThirdPoint)||point.Compare(myPoint, myThirdPoint)){
             System.out.println("The coordinates of the points are equal. Enter different values");
         }
         else{
             double S = computerArea(myPoint, mySecondPoint, myThirdPoint);
-            System.out.println("Area of a triangle = " + String.format("%.2f %n", S));
+            System.out.print("Area of a triangle = " + String.format("%.2f %n", S));
         }
     }
     //Площадь треугольника
