@@ -14,7 +14,7 @@ public class Point3d {
 
     //Конструктор по умолчанию
     public Point3d () {
-        this(0, 0, 0);
+        this(0.0 , 0.0, 0.0);
     }
 
     //Возвращение координаты X
@@ -48,7 +48,7 @@ public class Point3d {
     }
 
     //Сравнение двух объектов
-    public static boolean Compare(Point3d object, Point3d object1) {
+    public boolean Compare(Point3d object, Point3d object1) {
         return object.equals(object1);
     }
 
@@ -56,11 +56,11 @@ public class Point3d {
     public double distanceTo(Point3d object, Point3d object1){
 
         /**double x = object.getX();
-         double y = object.getX();
-         double z = object.getX();
+         double y = object.getY();
+         double z = object.getZ();
          double x1 = object1.getX();
-         double y1 = object1.getX();
-         double z1 = object1.getX();**/
+         double y1 = object1.getY();
+         double z1 = object1.getZ();**/
 
         double distance = Math.sqrt(Math.pow(object1.getX()-object.getX(), 2)+Math.pow(object1.getY()-object.getY(), 2)+Math.pow(object1.getZ()-object.getZ(), 2));
         return distance;
