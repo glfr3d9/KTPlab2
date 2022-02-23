@@ -1,7 +1,8 @@
 public class p2d {
 
-    private double xCoord;
-    private double yCoord;
+    protected double xCoord;
+    protected double yCoord;
+
     public p2d ( double x, double y) {
         xCoord = x;
         yCoord = y;
